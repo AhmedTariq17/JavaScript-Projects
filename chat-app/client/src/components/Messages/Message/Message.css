@@ -1,0 +1,115 @@
+/* Message box styling */
+.messageBox {
+  background: #f3f3f3;
+  border-radius: 20px;
+  padding: 10px 20px;
+  color: #353535;
+  display: inline-block;
+  max-width: 75%;
+  word-wrap: break-word;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Message box for current user's messages */
+.messageBox.backgroundBlue {
+  background: linear-gradient(135deg, #2979ff, #1a73e8);
+  color: white;
+  animation: slideIn 0.4s ease-in;
+}
+
+.messageBox.backgroundBlue:hover {
+  box-shadow: 0 6px 15px rgba(41, 121, 255, 0.3);
+  transform: scale(1.02);
+}
+
+/* Message box for other users' messages */
+.messageBox.backgroundLight {
+  background: #f3f3f3;
+  color: #353535;
+  animation: slideIn 0.4s ease-in;
+}
+
+.messageBox.backgroundLight:hover {
+  box-shadow: 0 6px 15px rgba(243, 243, 243, 0.3);
+  transform: scale(1.02);
+}
+
+/* Message text */
+.messageText {
+  width: 100%;
+  letter-spacing: 0.3px;
+  font-size: 1rem;
+  word-wrap: break-word;
+  line-height: 1.4;
+}
+
+.messageText img {
+  vertical-align: middle;
+}
+
+/* Message container */
+.messageContainer {
+  display: flex;
+  align-items: center;
+  margin: 5px 10px;
+  padding: 0 5%;
+}
+
+/* Sent text for the user name */
+.sentText {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #828282;
+  font-size: 0.85rem;
+  letter-spacing: 0.2px;
+}
+
+.pl-10 {
+  padding-left: 10px;
+}
+
+.pr-10 {
+  padding-right: 10px;
+}
+
+/* Justify messages for alignment */
+.justifyStart {
+  justify-content: flex-start;
+}
+
+.justifyEnd {
+  justify-content: flex-end;
+}
+
+/* Text colors */
+.colorWhite {
+  color: white;
+}
+
+.colorDark {
+  color: #353535;
+}
+
+/* Message animations */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .messageBox {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+
+  .sentText {
+    font-size: 0.75rem;
+  }
+}

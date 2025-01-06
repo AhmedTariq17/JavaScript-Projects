@@ -1,0 +1,90 @@
+/* InfoBar container styles */
+.infoBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #1a73e8, #4a90e2);
+  border-radius: 16px 16px 0 0;
+  height: 60px;
+  width: 100%;
+  padding: 0 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-in-out;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  position: relative;
+}
+
+/* Left section (room info) */
+.leftInnerContainer {
+  flex: 0.6;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.leftInnerContainer .roomIcon {
+  width: 15px;
+  height: 15px;
+  background-color: #34c759;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Right section (close button) */
+.rightInnerContainer {
+  flex: 0.4;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.rightInnerContainer .closeIcon {
+  font-size: 1.5rem;
+  color: #ffffff;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.rightInnerContainer .closeIcon:hover {
+  transform: scale(1.2);
+  color: #ff5e57;
+}
+
+/* Online icon styles */
+.onlineIcon {
+  margin-right: 10px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #34c759;
+  box-shadow: 0 0 8px rgba(52, 199, 89, 0.6);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .infoBar {
+    height: 50px;
+    font-size: 1rem;
+  }
+
+  .leftInnerContainer {
+    gap: 5px;
+  }
+
+  .rightInnerContainer .closeIcon {
+    font-size: 1.2rem;
+  }
+}

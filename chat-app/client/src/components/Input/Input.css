@@ -1,0 +1,63 @@
+/* Form container styling */
+.form {
+  display: flex;
+  align-items: center;
+  border-top: 2px solid #d3d3d3;
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 0 0 16px 16px;
+}
+
+/* Input field styling */
+.input {
+  flex: 1;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  background: #f9f9f9;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  background: #ffffff;
+  box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3);
+  outline: none;
+}
+
+/* Send button styling */
+.sendButton {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: linear-gradient(135deg, #2979ff, #1a73e8);
+  padding: 12px 25px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sendButton:hover {
+  background: linear-gradient(135deg, #1a73e8, #0056b3);
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 123, 255, 0.4);
+}
+
+/* Input field and button responsiveness */
+@media (max-width: 768px) {
+  .input {
+    font-size: 0.9rem;
+    padding: 10px 15px;
+  }
+
+  .sendButton {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}
