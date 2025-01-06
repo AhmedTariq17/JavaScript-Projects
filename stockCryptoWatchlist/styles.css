@@ -1,0 +1,454 @@
+/* General settings */
+body {
+    width: 350px;
+    margin: 0;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Add input and button matching widths */
+input, button {
+    width: 100%;  /* Set to 100% of the parent width */
+    box-sizing: border-box; /* Include padding and border in the width */
+}
+
+/* Style buttons */
+button {
+    background-color: #1a73e8;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Dark mode for buttons */
+button.dark {
+    background-color: #8ab4f8;
+    color: #202124;
+}
+
+button:hover {
+    background-color: #1669c1;
+}
+
+/* Style input boxes */
+input {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+input.dark {
+    background-color: #3c4043;
+    color: white;
+    border: 1px solid #5f6368;
+}
+  
+h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #1a73e8; /* Light blue */
+    text-align: center;
+}
+
+h5 {
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Dark Mode settings */
+body.dark {
+    background-color: #121212;
+    color: #e8eaed;
+}
+
+h3.dark {
+    color: #8ab4f8; /* Light blue for dark mode */
+}
+
+.container.dark {
+    background-color: #202124;
+    border-radius: 8px;
+}
+
+button.dark {
+    background-color: #8ab4f8;
+    color: #202124;
+}
+
+button.dark:hover {
+    background-color: #5f6368;
+}
+
+input.dark {
+    background-color: #3c4043;
+    color: white;
+    border: 1px solid #5f6368;
+}
+
+.list-group-item.dark {
+    background-color: #3c4043;
+    color: white;
+    border: 1px solid #5f6368;
+}
+
+/* Light mode */
+.container {
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+button {
+    background-color: #1a73e8;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #1669c1;
+}
+
+input {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.list-group-item {
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* Updated real-time price boxes in dark mode */
+.list-group-item.dark {
+    background-color: #3c4043;
+    color: white;
+    border: 1px solid #5f6368;
+}
+
+/* Links in light mode */
+a {
+    color: #1a73e8; /* Default link color */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Visited links in light mode */
+a:visited {
+    color: #1a73e8; /* Keep visited link color the same */
+}
+
+/* Links in dark mode */
+body.dark a {
+    color: #8ab4f8; /* Light blue link color in dark mode */
+}
+
+body.dark a:hover {
+    text-decoration: underline;
+}
+
+/* Visited links in dark mode */
+body.dark a:visited {
+    color: #8ab4f8; /* Keep visited link color the same */
+}
+
+/* Dark Mode Toggle - Styling the switch and positioning icon */
+.toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the switch and icon */
+    margin-bottom: 20px;
+    gap: 8px; /* Adjust the gap between the icon and toggle */
+}
+
+/* Make the icon act like a button */
+#theme-toggle-icon {
+    font-size: 24px; /* Icon size */
+    cursor: pointer; /* Make it clickable */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+  }
+  
+
+#theme-toggle {
+    width: 50px;
+    height: 24px;
+    appearance: none;
+    background-color: #ccc;
+    border-radius: 12px;
+    position: relative;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+}
+
+#theme-toggle:checked {
+    background-color: #8ab4f8;
+}
+
+#theme-toggle:before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.4s ease;
+}
+
+#theme-toggle:checked:before {
+    transform: translateX(26px);
+}
+
+/* News section styling */
+.news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Space between each news card */
+    margin-bottom: 20px;
+}
+
+/* News card styling */
+.news-card {
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card.dark {
+    background-color: #3c4043;
+    color: white;
+    border: 1px solid #5f6368;
+}
+
+.news-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background-color: #ececec;
+}
+
+.news-card.dark:hover {
+    background-color: #5f6368;
+}
+
+/* News headline link styling */
+.news-headline {
+    color: #1a73e8;
+    font-weight: 500;
+    font-size: 15px;
+    text-decoration: none;
+    line-height: 1.4;
+}
+
+body.dark .news-headline {
+    color: #8ab4f8;
+}
+
+.news-headline:hover {
+    text-decoration: underline;
+}
+
+/* Watchlist section styling */
+#watchlist {
+    list-style-type: none;  /* Remove bullet points */
+    padding: 0;  /* Remove default padding */
+    margin: 0;  /* Remove default margin */
+}
+
+/* Watchlist items styling */
+#watchlist li {
+    background-color: #3c4043;  /* Match dark mode background */
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 10px;  /* Space between items */
+    font-size: 14px;
+    border: 1px solid #5f6368;
+    display: flex;
+    justify-content: space-between;  /* Space between content */
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.3s ease; /* Smoother easing */
+}
+
+#watchlist li.light {
+    background-color: #f9f9f9;  /* Light mode background */
+    color: black;
+    border: 1px solid #ddd;
+}
+
+/* Add hover effect for better interactivity */
+#watchlist li:hover {
+    background-color: #5f6368;
+    transform: scale(1.05);  /* Slight zoom effect on hover, a bit more prominent */
+    transition: background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.3s ease; /* Smooth hover transition */
+}
+
+/* Symbol text */
+.symbol-text {
+    flex-grow: 1;
+}
+
+/* Remove button (X) */
+.remove-btn {
+    display: none;
+    margin-left: 10px;
+    color: white;
+    font-size: 14px; /* Slightly smaller and professional size */
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0; /* Hidden initially with opacity */
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease; /* Smoother fade-in and slide */
+    transform: translateX(20px); /* Position it off-screen for a smoother transition */
+}
+
+/* Show remove button on hover */
+#watchlist li:hover .remove-btn {
+    display: inline;
+    opacity: 1; /* Make it visible smoothly */
+    transform: translateX(0); /* Slide it into position */
+}
+
+/* Add hover effect for the 'X' button itself to look interactive */
+.remove-btn:hover {
+    color: #ff4d4f; /* Make it turn red on hover for emphasis */
+    transition: color 0.2s ease-in-out; /* Smooth color change */
+}
+
+
+
+/* Button improvements */
+button {
+    background-color: #1a73e8;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+button.dark {
+    background-color: #8ab4f8;
+    color: #202124;
+}
+
+button.dark:hover {
+    background-color: #5f6368;
+}
+
+/* Add more advanced light and dark modes */
+body.dark {
+    background-color: #121212;
+    color: #e8eaed;
+}
+
+h3.dark {
+    color: #8ab4f8;
+}
+
+.container.dark {
+    background-color: #202124;
+}
+
+.news-card {
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.news-card.dark {
+    background-color: #3c4043;
+    color: white;
+}
+
+.news-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background-color: #ececec;
+}
+
+/* Loading spinner */
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.loading img {
+    width: 50px;
+    height: 50px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Suggestions dropdown container */
+.suggestions-container {
+    position: absolute;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: white;
+    border: 1px solid #ddd;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none; /* Hidden by default */
+}
+
+/* Suggestion item styling */
+.suggestion-item {
+    padding: 8px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    background-color: white;
+    font-size: 14px;
+}
+
+.suggestion-item:hover {
+    background-color: #f1f1f1; /* Highlight on hover */
+}
+
+/* Dark mode styles for suggestions */
+body.dark .suggestions-container {
+    background-color: #3c4043;
+    color: white;
+}
+
+body.dark .suggestion-item {
+    background-color: #3c4043;
+    color: white;
+    border-bottom: 1px solid #5f6368;
+}
+
+body.dark .suggestion-item:hover {
+    background-color: #5f6368;
+}
